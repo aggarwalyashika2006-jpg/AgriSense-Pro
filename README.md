@@ -1,66 +1,92 @@
-🌱 AgriSense Pro - IoT Smart Agriculture Monitoring System
-📌 Project Overview
+# 🌱 AgriSense Pro - IoT Smart Agriculture Monitoring Platform
 
-AgriSense Pro is an IoT-based Smart Agriculture Monitoring System designed to monitor critical environmental conditions affecting crop growth. The system collects data from multiple sensors such as soil moisture, temperature, humidity, water level, and light intensity, analyzes the data, and provides intelligent irrigation recommendations.
+## 📌 Overview
 
-This project demonstrates the application of IoT, Embedded Systems, Automation, and Data Analytics in modern agriculture to improve productivity, reduce water wastage, and support smart farming practices.
+AgriSense Pro is an IoT-inspired Smart Agriculture Monitoring Platform designed to monitor environmental conditions and assist in intelligent irrigation decisions.
 
-🎯 Problem Statement
+The platform simulates agricultural sensor data, analyzes farm conditions, generates alerts, logs historical data, and visualizes key metrics through an interactive Streamlit dashboard.
 
-Traditional farming methods often depend on manual monitoring of environmental conditions, leading to:
+This project demonstrates concepts used in:
 
-Water wastage
-Delayed irrigation decisions
-Reduced crop yield
-Inefficient resource utilization
-Increased operational costs
+* Internet of Things (IoT)
+* Smart Farming
+* Precision Agriculture
+* Sensor Data Monitoring
+* Automation Systems
+* Data Analytics
+* Dashboard Development
 
-AgriSense Pro addresses these challenges by providing real-time monitoring, automated decision-making, and visual analytics for farm management.
+---
 
-🚀 Key Features
-🌱 Environmental Monitoring
-Soil Moisture Monitoring
-Temperature Monitoring
-Humidity Monitoring
-Water Level Monitoring
-Light Intensity Monitoring
-🤖 Smart Automation
-Automatic Irrigation Recommendation
-Pump ON/OFF Control Simulation
-Threshold-Based Alert System
-📊 Data Analytics
-Farm Health Score
-Historical Data Analysis
-Trend Visualization
-Sensor Data Logging
-📈 Dashboard
-Interactive Streamlit Dashboard
-Real-Time Sensor Metrics
-Plotly Charts & Gauges
-Smart Alerts Panel
-🔧 IoT Simulation
-Arduino UNO Simulation
-Wokwi Circuit Design
-Virtual Sensor Data Generation
-Serial Monitor Output
-🏗 System Architecture
+## 🎯 Problem Statement
+
+Traditional farming often relies on manual observation and fixed irrigation schedules.
+
+This can lead to:
+
+* Water wastage
+* Over-irrigation
+* Under-irrigation
+* Delayed response to environmental changes
+* Reduced crop productivity
+
+AgriSense Pro addresses these challenges by monitoring simulated sensor data and providing intelligent irrigation recommendations.
+
+---
+
+## 🚀 Features
+
+### Smart Monitoring
+
+* Soil Moisture Monitoring
+* Temperature Monitoring
+* Humidity Monitoring
+* Light Intensity Monitoring
+* Water Level Monitoring
+
+### Automation
+
+* Automatic Pump ON/OFF Logic
+* Smart Irrigation Recommendation
+* Alert Generation
+
+### Analytics
+
+* Farm Health Score
+* Historical Sensor Tracking
+* Trend Analysis
+* Interactive Visualizations
+
+### Dashboard
+
+* Real-Time Dashboard
+* KPI Cards
+* Gauge Charts
+* Interactive Graphs
+* Alert Panel
+
+---
+
+## 🏗 System Architecture
+
+```text
 Sensors
 │
 ├── Soil Moisture Sensor
-├── DHT22 Temperature Sensor
-├── DHT22 Humidity Sensor
-├── LDR Light Sensor
+├── Temperature Sensor
+├── Humidity Sensor
+├── Light Sensor
 └── Water Level Sensor
         │
         ▼
-Arduino UNO
+Data Collection Layer
         │
         ▼
-Data Processing Layer
+Processing Engine
         │
         ├── Threshold Analysis
-        ├── Alert Generation
         ├── Pump Control Logic
+        ├── Alert Generation
         └── Farm Health Score
         │
         ▼
@@ -71,180 +97,251 @@ Streamlit Dashboard
         │
         ▼
 Farmer / User
-🔄 Workflow
-Sensor Readings
-      │
-      ▼
-Arduino Processing
-      │
-      ▼
+```
+
+---
+
+## 🔄 Workflow
+
+```text
+Sensor Data
+     │
+     ▼
+Data Processing
+     │
+     ▼
 Threshold Checking
-      │
-      ▼
+     │
+     ▼
 Alert Generation
-      │
-      ▼
+     │
+     ▼
 Pump Control Decision
-      │
-      ▼
-Data Logging
-      │
-      ▼
+     │
+     ▼
 Dashboard Visualization
-🛠 Tech Stack
-Hardware / Simulation
-Arduino UNO
-DHT22 Sensor
-Soil Moisture Sensor
-Water Level Sensor
-LDR Sensor
-LED (Pump Indicator)
-Wokwi Simulator
-Software
-Python
-Streamlit
-Plotly
-Pandas
-NumPy
-Tools
-Git
-GitHub
-VS Code
-📂 Project Structure
+```
+
+---
+
+## 🛠 Technologies Used
+
+### Programming
+
+* Python
+
+### Data Processing
+
+* Pandas
+* NumPy
+
+### Visualization
+
+* Streamlit
+* Plotly
+
+### Storage
+
+* CSV Files
+
+### Version Control
+
+* Git
+* GitHub
+
+---
+
+## 📂 Project Structure
+
+```text
 AgriSense-Pro/
-│
-├── arduino_code/
-│   └── smart_agriculture.ino
-│
-├── python_simulation/
-│   └── sensor_simulator.py
 │
 ├── dashboard/
 │   └── app.py
 │
+├── python_simulation/
+│   └── sensor_simulator.py
+│
 ├── data/
 │   └── sensor_data.csv
 │
-├── images/
-│   ├── circuit_diagram.png
-│   ├── dashboard.png
-│   ├── serial_monitor.png
-│   ├── pump_on.png
-│   └── alerts.png
-│
 ├── outputs/
+│
+├── images/
 │
 ├── docs/
 │
 ├── requirements.txt
 ├── README.md
 └── .gitignore
-⚙ Installation
-Create Virtual Environment
+```
+
+---
+
+## ⚙ Installation
+
+### Create Virtual Environment
+
+```bash
 python -m venv venv
-Activate Environment
-Windows
+```
+
+### Activate Virtual Environment
+
+#### Windows
+
+```bash
 venv\Scripts\activate
-Install Dependencies
+```
+
+### Install Dependencies
+
+```bash
 pip install -r requirements.txt
-▶ Running the Project
-Generate Sensor Data
+```
+
+---
+
+## ▶ Running the Project
+
+### Generate Sensor Data
+
+```bash
 python python_simulation/sensor_simulator.py
-Run Dashboard
+```
+
+### Launch Dashboard
+
+```bash
 streamlit run dashboard/app.py
-🔌 Arduino Circuit Components
-Component	Purpose
-Arduino UNO	Main Controller
-DHT22	Temperature & Humidity
-Soil Moisture Sensor	Soil Condition Monitoring
-Water Level Sensor	Tank Monitoring
-LDR Sensor	Light Intensity Detection
-LED	Pump Simulation
-🚨 Alert Conditions
+```
+
+---
+
+## 📊 Dashboard Components
+
+### KPI Metrics
+
+* Soil Moisture
+* Temperature
+* Humidity
+* Water Level
+* Light Intensity
+* Pump Status
+* Farm Health Score
+
+### Visualizations
+
+* Soil Moisture Gauge
+* Water Level Gauge
+* Temperature Trend
+* Soil Moisture Trend
+* Humidity Trend
+* Water Level Trend
+
+### Alerts
+
+* Low Soil Moisture Alert
+* High Temperature Alert
+* Low Water Level Alert
+
+---
+
+## 🤖 Smart Irrigation Logic
+
+```python
+if soil_moisture < 30:
+    pump = "ON"
+else:
+    pump = "OFF"
+```
+
+### Recommendation Engine
+
+```text
 Low Soil Moisture
-Soil Moisture < 30%
+→ Start Irrigation
 
-Action:
+Normal Moisture
+→ No Irrigation Required
+```
 
-Pump ON
-Start Irrigation
-High Temperature
-Temperature > 40°C
+---
 
-Action:
+## 🎯 Farm Health Score
 
-High Temperature Alert
-Low Water Level
-Water Level < 20%
+Farm Health Score is calculated based on:
 
-Action:
+* Soil Moisture
+* Temperature
+* Water Level
 
-Low Water Level Alert
-🎯 Farm Health Score
+Score Range:
 
-The Farm Health Score evaluates overall farm conditions using:
+```text
+100 = Excellent
 
-Soil Moisture
-Temperature
-Water Level
-Score Range
-Score	Status
-90-100	Excellent
-70-89	Good
-50-69	Average
-Below 50	Needs Attention
-📊 Dashboard Features
-KPI Cards
-Soil Moisture
-Temperature
-Humidity
-Water Level
-Light Intensity
-Pump Status
-Farm Health Score
-Charts
-Temperature Trend
-Humidity Trend
-Soil Moisture Trend
-Water Level Trend
-Gauges
-Soil Moisture Gauge
-Water Level Gauge
-📚 Learning Outcomes
+80–99 = Good
 
-Through this project, I learned:
+60–79 = Moderate
 
-Internet of Things (IoT)
-Sensor Integration
-Embedded Systems
-Automation Logic
-Smart Agriculture Concepts
-Python Programming
-Dashboard Development
-Data Visualization
-Git & GitHub
-🔮 Future Enhancements
-ESP32 Integration
-MQTT Communication
-Cloud Deployment
-SQLite Database
-Weather API Integration
-Email Notifications
-SMS Alerts
-AI-Based Irrigation Prediction
-Mobile Application
-💼 Skills Demonstrated
-IoT Development
-Embedded Systems
-Python Programming
-Data Analytics
-Automation Systems
-Streamlit Development
-Plotly Visualization
-Arduino Programming
-Git Version Control
-GitHub Project Management
-👨‍💻 Author
+Below 60 = Needs Attention
+```
 
-Yashika Aggarwal
-Link-https://agrisense-pro-hpzwtn8dqxqfwchvfjgvqy.streamlit.app/
+---
+
+## 📈 Future Enhancements
+
+* SQLite Database Integration
+* PDF Report Generation
+* Email Alerts
+* Weather API Integration
+* MQTT Communication
+* ThingSpeak Cloud Dashboard
+* ESP32 Integration
+* Mobile Notifications
+* AI-Based Irrigation Prediction
+
+---
+
+## 🎓 Learning Outcomes
+
+Through this project, I gained practical experience in:
+
+* IoT System Design
+* Sensor Data Processing
+* Automation Logic
+* Dashboard Development
+* Data Visualization
+* Python Programming
+* Version Control using Git
+* GitHub Project Management
+
+---
+
+## 💼 Skills Demonstrated
+
+* Python
+* Streamlit
+* Plotly
+* Pandas
+* IoT Concepts
+* Smart Agriculture
+* Data Analytics
+* Dashboard Development
+* Automation Systems
+* Git & GitHub
+
+---
+
+## 👨‍💻 Author
+
+YASHIKA
+
+Link=https://agrisense-pro-hpzwtn8dqxqfwchvfjgvqy.streamlit.app/
+
+---
+
+## ⭐ Support
+
+If you found this project useful, consider giving it a star on GitHub.
